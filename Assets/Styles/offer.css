@@ -1,0 +1,298 @@
+.offer-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: bounce-in-center 1s ease-out;
+}
+
+
+@keyframes bounce-in-center {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.offer-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ff4081;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.offer-container p {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    line-height: 1.6;
+    padding: 0 15px;
+}
+
+.offer-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.offer-container li {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.offer-container li::before {
+    content: '\e5ca';
+    font-family: 'Material Icons';
+    font-size: 1.2rem;
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.offer-container span.material-icons {
+    font-size: 2rem;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #FFC107;
+}
+
+
+.offer-buttons {
+    margin-top: 20px;
+}
+
+.offer-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: rgba(255, 105, 180, 0.8);
+    border: 2px solid rgba(255, 105, 180, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 10px;
+}
+
+.offer-buttons .yes-button:hover {
+    background: rgba(255, 105, 180, 0.9);
+    border-color: rgba(255, 105, 180, 1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+.offer-buttons .no-button {
+    background: rgba(255, 82, 82, 0.8);
+    border: 2px solid rgba(255, 82, 82, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.offer-buttons .no-button:hover {
+    background: rgba(255, 82, 82, 0.9);
+    border-color: rgba(255, 82, 82, 1);
+}
+
+
+.fixed-position {
+    z-index: 9999;
+    transition: all 0.5s ease;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.popup h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: #25D366;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background: #128C7E;
+}
+
+@media (max-width: 767px) {
+    .offer-container {
+        width: 90%;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .offer-container h1 {
+        font-size: 2rem;
+    }
+
+    .offer-container p {
+        font-size: 1.1rem;
+    }
+
+    .offer-container ul li {
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+
+    .offer-container span.material-icons {
+        font-size: 1.5rem;
+    }
+
+    .offer-buttons button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .popup-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .popup h2 {
+        font-size: 1.2rem;
+    }
+
+    .popup p {
+        font-size: 1rem;
+    }
+
+    .whatsapp-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .offer-container {
+        width: 85%;
+        padding: 25px;
+        font-size: 1.2rem;
+    }
+
+    .offer-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .offer-container p {
+        font-size: 1.3rem;
+    }
+
+    .offer-container ul li {
+        font-size: 1rem;
+        padding-left: 25px;
+    }
+
+    .offer-container span.material-icons {
+        font-size: 1.8rem;
+    }
+
+    .offer-buttons button {
+        font-size: 1rem;
+        padding: 9px 18px;
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 18px;
+    }
+
+    .popup h2 {
+        font-size: 1.4rem;
+    }
+
+    .popup p {
+        font-size: 1.1rem;
+    }
+
+    .whatsapp-button {
+        font-size: 1rem;
+        padding: 9px 18px;
+    }
+}
